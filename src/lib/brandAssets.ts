@@ -1,4 +1,4 @@
-const assetBase = "/assets";
+const assetBase = `${import.meta.env.BASE_URL}assets`;
 
 const sampleFallbacks = {
   logo: new URL(
