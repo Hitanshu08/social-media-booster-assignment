@@ -16,3 +16,4 @@ pnpm-debug.log*
 coverage/
 .DS_Store
 .sample/
+email-signature.html

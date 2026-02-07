@@ -55,10 +55,7 @@
             "vite": "6.3.5"
       },
       "scripts": {
-            "copy:assets": "node scripts/copy-assets.js",
-            "predev": "node scripts/copy-assets.js",
             "dev": "vite",
-            "prebuild": "node scripts/copy-assets.js",
             "build": "vite build",
             "preview": "vite preview --port 4173 --strictPort"
       }

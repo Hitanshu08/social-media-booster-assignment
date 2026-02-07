@@ -1,5 +1,4 @@
 Place the branded assets here and keep the filenames intact.
-`npm run dev` and `npm run build` copy them from `.sample` automatically.
 
 Expected files:
 - 7ZviI998tvmnzabssH15S9Hc.png

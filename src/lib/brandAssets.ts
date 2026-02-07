@@ -1,39 +1,22 @@
-const assetBase = `${import.meta.env.BASE_URL}assets`;
-
-const sampleFallbacks = {
-  logo: new URL(
-    "../../.sample/7ZviI998tvmnzabssH15S9Hc.png",
-    import.meta.url,
-  ).href,
-  dashboardIcon: new URL(
-    "../../.sample/KYNn75YK8fG2lpgQh1ci1voGSWs.png",
-    import.meta.url,
-  ).href,
-  searchIcon: new URL(
-    "../../.sample/YZMsuOgJQUkrcHAV7HunQZTIk.png",
-    import.meta.url,
-  ).href,
-  emptyStateIcon: new URL(
-    "../../.sample/0dyyM325eCiaagkU8KOSTqAxDQ.png",
-    import.meta.url,
-  ).href,
-};
+const baseUrl = (import.meta as { env?: { BASE_URL?: string } }).env?.BASE_URL ?? '/';
+const assetBase = `${baseUrl}assets`;
+const buildAsset = (filename: string) => `${assetBase}/${filename}`;
 
 export const brandAssets = {
   logo: {
-    src: `${assetBase}/7ZviI998tvmnzabssH15S9Hc.png`,
-    fallbackSrc: sampleFallbacks.logo,
+    src: buildAsset("7ZviI998tvmnzabssH15S9Hc.png"),
+    fallbackSrc: buildAsset("7ZviI998tvmnzabssH15S9Hc.png"),
   },
   dashboardIcon: {
-    src: `${assetBase}/KYNn75YK8fG2lpgQh1ci1voGSWs.png`,
-    fallbackSrc: sampleFallbacks.dashboardIcon,
+    src: buildAsset("KYNn75YK8fG2lpgQh1ci1voGSWs.png"),
+    fallbackSrc: buildAsset("KYNn75YK8fG2lpgQh1ci1voGSWs.png"),
   },
   searchIcon: {
-    src: `${assetBase}/YZMsuOgJQUkrcHAV7HunQZTIk.png`,
-    fallbackSrc: sampleFallbacks.searchIcon,
+    src: buildAsset("YZMsuOgJQUkrcHAV7HunQZTIk.png"),
+    fallbackSrc: buildAsset("YZMsuOgJQUkrcHAV7HunQZTIk.png"),
   },
   emptyStateIcon: {
-    src: `${assetBase}/0dyyM325eCiaagkU8KOSTqAxDQ.png`,
-    fallbackSrc: sampleFallbacks.emptyStateIcon,
+    src: buildAsset("0dyyM325eCiaagkU8KOSTqAxDQ.png"),
+    fallbackSrc: buildAsset("0dyyM325eCiaagkU8KOSTqAxDQ.png"),
   },
 };
